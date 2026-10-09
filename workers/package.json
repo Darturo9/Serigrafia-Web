@@ -1,0 +1,5 @@
+{
+  "name": "jyz-worker-local-tooling",
+  "private": true,
+  "devDependencies": {"wrangler": "4.148.0"}
+}

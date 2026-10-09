@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Catálogo de verificación local</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; color: #202020; background: #fafafa; }
+    main { max-width: 960px; padding: 32px 20px; margin: auto; }
+    .aviso { padding: 16px; border: 1px solid #ccc; background: white; }
+    .productos { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,260px),1fr)); gap: 24px; }
+    article { background: white; padding: 20px; border: 1px solid #ddd; }
+    img { display: block; width: 100%; height: 220px; object-fit: contain; }
+    .descripcion { white-space: pre-line; overflow-wrap: anywhere; }
+    a { color: #184c82; }
+  </style>
+</head>
+<body><main>
+  <p class="aviso">Prueba local del catálogo. Esta pantalla no es el diseño aprobado del negocio.</p>
+  <h1>Productos publicados</h1>
+  <p><a href="{% url 'admin:index' %}">Administrar productos</a></p>
+  <div class="productos">
+  {% for producto in productos %}
+    <article>
+      {% if producto.es_ejemplo %}<p><strong>Dato de ejemplo para pruebas</strong></p>{% endif %}
+      {% if producto.foto_url %}<img src="{{ producto.foto_url }}" alt="{{ producto.texto_foto|default:producto.nombre }}">{% elif producto.foto_error %}<p>La foto no está disponible temporalmente.</p>{% endif %}
+      <h2>{{ producto.nombre }}</h2>
+      <p class="descripcion">{{ producto.descripcion }}</p>
+      {% if producto.categoria %}<p>Categoría: {{ producto.categoria }}</p>{% endif %}
+      {% if producto.tallas %}<p>Tallas: {{ producto.tallas|join:", " }}</p>{% endif %}
+    </article>
+  {% empty %}<p>El catálogo todavía no tiene productos publicados.</p>{% endfor %}
+  </div>
+</main></body></html>

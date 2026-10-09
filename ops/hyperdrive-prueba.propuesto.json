@@ -1,0 +1,18 @@
+{
+  "estado": "propuesto_no_aplicado",
+  "name": "jyz-prueba",
+  "origin": {
+    "scheme": "postgres",
+    "host": "db.kcahxuvfmrzxzlnpezyf.supabase.co",
+    "port": 5432,
+    "database": "postgres",
+    "user": "jyz_app",
+    "password": "PROVISIONAR_POR_CANAL_SEGURO"
+  },
+  "caching": {"disabled": true},
+  "origin_connection_limit": 5,
+  "mtls": {
+    "sslmode": "verify-full",
+    "ca_certificate_id": "REEMPLAZAR_TRAS_SUBIR_CA_AUTORIZADA"
+  }
+}

@@ -1,0 +1,5 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% block title %}{{ title }}{% if subtitle %} | {{ subtitle }}{% endif %} | {{ site_title }}{% endblock %}
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" href="{% static 'catalogo/admin-jyz.css' %}">{% endblock %}
+{% block branding %}<a class="jyz-brand" href="{% url 'admin:index' %}"><img src="{% static 'catalogo/logo-jyz-del-pdf.jpg' %}" alt="JYZ" width="56" height="56"><span><strong>JYZ</strong><span>Administración del catálogo y galería</span></span></a>{% endblock %}

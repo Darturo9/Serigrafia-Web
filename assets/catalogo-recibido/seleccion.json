@@ -1,0 +1,210 @@
+[
+  {
+    "file": "1.jpeg",
+    "nombre": "Camiseta Rick y Morty",
+    "categoria": "Camisetas",
+    "descripcion": "Camiseta blanca con ilustración azul y amarilla de Rick y Morty. Todas las tallas disponibles. Consulta precio y medidas por WhatsApp.",
+    "sha256": "58445024ae1c80953a4c540a927b2ca1f6790a9e261b7feb113e0b6732a94bf3",
+    "dimensions": [
+      719,
+      1600
+    ],
+    "publicar": true,
+    "evaluacion": "Aceptada: contornos y estampado suficientemente nítidos para catálogo web."
+  },
+  {
+    "file": "2.jpeg",
+    "nombre": "Camiseta Oliver Tree",
+    "categoria": "Camisetas",
+    "descripcion": "Camiseta oscura con retrato y diseño Oliver Tree. Todas las tallas disponibles. Consulta precio y medidas por WhatsApp.",
+    "sha256": "4ec50c77baf802069fb4adec485109e46ed61d092e4a91d85973791fadd1d677",
+    "dimensions": [
+      719,
+      760
+    ],
+    "publicar": true,
+    "evaluacion": "Aceptada: contornos y estampado suficientemente nítidos para catálogo web."
+  },
+  {
+    "file": "WhatsApp Image 2026-10-08 at 15.18.44.jpeg",
+    "nombre": "Camiseta WOS",
+    "categoria": "Camisetas",
+    "descripcion": "Camiseta oscura con ilustración de una boca y texto WOS. Todas las tallas disponibles. Consulta precio y medidas por WhatsApp.",
+    "sha256": "5c7ea9286fb9e57643405e7487afd8ba8cc7e813fcba82816f8c03fb4a4afac6",
+    "dimensions": [
+      899,
+      1177
+    ],
+    "publicar": true,
+    "evaluacion": "Aceptada: contornos y estampado suficientemente nítidos para catálogo web."
+  },
+  {
+    "file": "back_to_future_mejorada.png",
+    "nombre": "Camiseta Back to the Future",
+    "categoria": "Camisetas",
+    "descripcion": "Camiseta negra con diseño blanco Back to the Future. Todas las tallas disponibles. Consulta precio y medidas por WhatsApp.",
+    "sha256": "f320ff2ffd2ecd240e0287903a9916a8dd991283ee94498d9106a0aaebc44129",
+    "dimensions": [
+      3000,
+      4500
+    ],
+    "publicar": true,
+    "evaluacion": "Aceptada: contornos y estampado suficientemente nítidos para catálogo web."
+  },
+  {
+    "file": "camiseta_deadpool_mejorada.png",
+    "nombre": "Camiseta Deadpool",
+    "categoria": "Camisetas",
+    "descripcion": "Camiseta blanca con diseño de Deadpool en rojo y negro. Todas las tallas disponibles. Consulta precio y medidas por WhatsApp.",
+    "sha256": "006366aa3becf85d28f0455dba037bf71ee63eeca7beb98f70228af2701dcc94",
+    "dimensions": [
+      3000,
+      4500
+    ],
+    "publicar": true,
+    "evaluacion": "Aceptada: contornos y estampado suficientemente nítidos para catálogo web."
+  },
+  {
+    "file": "camiseta_inosuke_mejorada.png",
+    "nombre": "Camiseta Inosuke",
+    "categoria": "Camisetas",
+    "descripcion": "Camiseta negra con ilustración de Inosuke. Todas las tallas disponibles. Consulta precio y medidas por WhatsApp.",
+    "sha256": "955a6099e97c9ca550b5ac057bfa36c6f6a80053c0f1b7740864337eac29ee20",
+    "dimensions": [
+      4000,
+      6000
+    ],
+    "publicar": true,
+    "evaluacion": "Aceptada: contornos y estampado suficientemente nítidos para catálogo web."
+  },
+  {
+    "file": "catalogo_mejorado.png",
+    "nombre": "Camiseta Spider-Man · emblema",
+    "categoria": "Camisetas",
+    "descripcion": "Camiseta negra con emblema rojo de Spider-Man. Todas las tallas disponibles. Consulta precio y medidas por WhatsApp.",
+    "sha256": "d180d3f232efa6df8948de357246857a1c99b3d3152051869fcdf11593dd4425",
+    "dimensions": [
+      1656,
+      2484
+    ],
+    "publicar": false,
+    "evaluacion": "Excluida: pixelación, bordes dentados y pérdida visible de detalle en estampado."
+  },
+  {
+    "file": "catalogo_mejorado_attack_titan.png",
+    "nombre": "Camiseta Attack on Titan",
+    "categoria": "Camisetas",
+    "descripcion": "Camiseta negra con diseño Attack on Titan; la imagen muestra frente y espalda. Todas las tallas disponibles. Consulta precio y medidas por WhatsApp.",
+    "sha256": "a9f5d51679f5672ec8b2e4dcbe60a5729eca42c4db9b61554f3400829eace8a1",
+    "dimensions": [
+      1596,
+      2004
+    ],
+    "publicar": false,
+    "evaluacion": "Excluida: pixelación, bordes dentados y pérdida visible de detalle en estampado."
+  },
+  {
+    "file": "catalogo_mejorado_simpsons (1).png",
+    "nombre": "Camiseta Lisa Simpson",
+    "categoria": "Camisetas",
+    "descripcion": "Camiseta oscura con diseño de Lisa Simpson en el pecho. Todas las tallas disponibles. Consulta precio y medidas por WhatsApp.",
+    "sha256": "a0aae53a2a0911d801157f9d4e9a74177faf028159447576a9de2a718711a26e",
+    "dimensions": [
+      1656,
+      2484
+    ],
+    "publicar": false,
+    "evaluacion": "Excluida: pixelación, bordes dentados y pérdida visible de detalle en estampado."
+  },
+  {
+    "file": "catalogo_mejorado_spiderman.png",
+    "nombre": "Camiseta Spider-Man · ilustración",
+    "categoria": "Camisetas",
+    "descripcion": "Camiseta oscura con ilustración roja y azul de Spider-Man. Todas las tallas disponibles. Consulta precio y medidas por WhatsApp.",
+    "sha256": "305cdec4c5f1095d0ac7190396fca3c97e6fd63e3ef3ddba49ca76091822cde5",
+    "dimensions": [
+      1596,
+      2004
+    ],
+    "publicar": false,
+    "evaluacion": "Excluida: pixelación, bordes dentados y pérdida visible de detalle en estampado."
+  },
+  {
+    "file": "catalogo_mejorado_superman.png",
+    "nombre": "Camiseta Superman",
+    "categoria": "Camisetas",
+    "descripcion": "Camiseta negra con emblema oscuro de Superman. Todas las tallas disponibles. Consulta precio y medidas por WhatsApp.",
+    "sha256": "bf979f1c949655499311e39e34f124878a9d6578dc8c25fcc159274dc72873d8",
+    "dimensions": [
+      1656,
+      2484
+    ],
+    "publicar": false,
+    "evaluacion": "Excluida: pixelación, bordes dentados y pérdida visible de detalle en estampado."
+  },
+  {
+    "file": "demon_slayer_sudadera_mejorada.png",
+    "nombre": "Hoodie Demon Slayer",
+    "categoria": "Hoodies",
+    "descripcion": "Hoodie negro con diseño pequeño de Demon Slayer en el pecho. Todas las tallas disponibles. Consulta precio y medidas por WhatsApp.",
+    "sha256": "71fd153285005e882ab30af526f35a3e18a50ef24a67f87e43f6aec2b792b1ca",
+    "dimensions": [
+      3000,
+      4500
+    ],
+    "publicar": true,
+    "evaluacion": "Aceptada: contornos y estampado suficientemente nítidos para catálogo web."
+  },
+  {
+    "file": "hello_kitty_mejorada.png",
+    "nombre": "Camiseta Hello Kitty",
+    "categoria": "Camisetas",
+    "descripcion": "Camiseta clara con ilustración de Hello Kitty. Todas las tallas disponibles. Consulta precio y medidas por WhatsApp.",
+    "sha256": "46cd3ceeae4d8ad0c279adf188d8c69369f6d16685c3a17e49022cdd6b5972c5",
+    "dimensions": [
+      3000,
+      4500
+    ],
+    "publicar": true,
+    "evaluacion": "Aceptada: contornos y estampado suficientemente nítidos para catálogo web."
+  },
+  {
+    "file": "image_mejorada_catalogo.png",
+    "nombre": "Camiseta Nezuko",
+    "categoria": "Camisetas",
+    "descripcion": "Camiseta clara con ilustración rosa de Nezuko. Todas las tallas disponibles. Consulta precio y medidas por WhatsApp.",
+    "sha256": "7bc67e598f8699a667576a5446f878d7765a0ca26849699f7c1cc3828615aab0",
+    "dimensions": [
+      3000,
+      4500
+    ],
+    "publicar": true,
+    "evaluacion": "Aceptada: contornos y estampado suficientemente nítidos para catálogo web."
+  },
+  {
+    "file": "sudadera_mejorada_catalogo.png",
+    "nombre": "Sudadera Las Chicas Superpoderosas",
+    "categoria": "Sudaderas",
+    "descripcion": "Sudadera negra con ilustración de Las Chicas Superpoderosas. Todas las tallas disponibles. Consulta precio y medidas por WhatsApp.",
+    "sha256": "c59fd7b252de333d8d6d8c4ea89c646b79038badb04a68c867ba7768d915219e",
+    "dimensions": [
+      3000,
+      4500
+    ],
+    "publicar": true,
+    "evaluacion": "Aceptada: contornos y estampado suficientemente nítidos para catálogo web."
+  },
+  {
+    "file": "sudadera_superman_mejorada.png",
+    "nombre": "Sudadera Superman",
+    "categoria": "Sudaderas",
+    "descripcion": "Sudadera oscura con pequeño emblema de Superman en el pecho. Todas las tallas disponibles. Consulta precio y medidas por WhatsApp.",
+    "sha256": "85e00e9f40fb55ca5a29971da24dc5486849517e981d5d752425d4db877b506b",
+    "dimensions": [
+      3000,
+      4500
+    ],
+    "publicar": true,
+    "evaluacion": "Aceptada: contornos y estampado suficientemente nítidos para catálogo web."
+  }
+]

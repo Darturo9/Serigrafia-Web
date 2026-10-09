@@ -1,0 +1,44 @@
+{
+  "source": "Fotos entregadas directamente por el usuario, 8 octubre 2026",
+  "photos": [
+    {
+      "original": "assets/jyz-fotos-recibidas/playera-blanca-ilustracion.jpeg",
+      "web": "catalogo/static/catalogo/galeria-jyz/playera-blanca-ilustracion.webp",
+      "original_sha256": "58445024ae1c80953a4c540a927b2ca1f6790a9e261b7feb113e0b6732a94bf3",
+      "web_sha256": "eac7be116fd8ddcfd3c8db1eac9a82c2b4257310be0a1e6338180a67d96a19e8",
+      "dimensions": [
+        719,
+        1600
+      ],
+      "original_bytes": 165511,
+      "web_bytes": 152408,
+      "retouch": "none; original photo converted without crop or enlargement"
+    },
+    {
+      "original": "assets/jyz-fotos-recibidas/playera-negra-oliver-tree.jpeg",
+      "web": "catalogo/static/catalogo/galeria-jyz/playera-negra-oliver-tree.webp",
+      "original_sha256": "4ec50c77baf802069fb4adec485109e46ed61d092e4a91d85973791fadd1d677",
+      "web_sha256": "e8ad443f2313023141248c04d9a6e89cba66eb209f2d3943debbc4e0b0095df9",
+      "dimensions": [
+        719,
+        760
+      ],
+      "original_bytes": 80434,
+      "web_bytes": 69376,
+      "retouch": "none; original photo converted without crop or enlargement"
+    },
+    {
+      "original": "assets/jyz-fotos-recibidas/playera-negra-wos.jpeg",
+      "web": "catalogo/static/catalogo/galeria-jyz/playera-negra-wos.webp",
+      "original_sha256": "5c7ea9286fb9e57643405e7487afd8ba8cc7e813fcba82816f8c03fb4a4afac6",
+      "web_sha256": "88f5ded6f0e7bb09d53dcaf063c75b59488bb33101c902db7825bc77c0e16dcf",
+      "dimensions": [
+        899,
+        1177
+      ],
+      "original_bytes": 102365,
+      "web_bytes": 77788,
+      "retouch": "none; original photo converted without crop or enlargement"
+    }
+  ]
+}

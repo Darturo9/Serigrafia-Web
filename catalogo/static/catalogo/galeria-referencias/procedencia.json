@@ -1,0 +1,44 @@
+[
+  {
+    "file": "playeras-perchas.webp",
+    "photographer": "Ali Babajahdi",
+    "source": "https://www.pexels.com/photo/t-shirts-on-a-rack-26601197/",
+    "download": "https://images.pexels.com/photos/26601197/pexels-photo-26601197/free-photo-of-t-shirts-on-a-rack.jpeg?auto=compress&dpr=1&h=750&w=1260",
+    "license": "https://www.pexels.com/license/",
+    "dimensions": [
+      500,
+      750
+    ],
+    "bytes": 15248,
+    "sha256": "a82cfba5e048cc9960bdeac2261306a0eec30df73dc694206cb3f8c661dec460",
+    "reference_only": true
+  },
+  {
+    "file": "gorra-referencia.webp",
+    "photographer": "Marcus Murphy",
+    "source": "https://www.pexels.com/photo/black-and-white-cap-1878821/",
+    "download": "https://images.pexels.com/photos/1878821/pexels-photo-1878821.jpeg?auto=compress&dpr=1&h=750&w=1260",
+    "license": "https://www.pexels.com/license/",
+    "dimensions": [
+      1125,
+      750
+    ],
+    "bytes": 57968,
+    "sha256": "95f662eb3742365373cc49a07ee8c102840cfb91520f9a83ec2f58dc7545a818",
+    "reference_only": true
+  },
+  {
+    "file": "playeras-colores.webp",
+    "photographer": "Alexey Demidov",
+    "source": "https://www.pexels.com/photo/colorful-t-shirts-on-hangers-10877346/",
+    "download": "https://images.pexels.com/photos/10877346/pexels-photo-10877346.jpeg?auto=compress&dpr=1&h=750&w=1260",
+    "license": "https://www.pexels.com/license/",
+    "dimensions": [
+      1125,
+      750
+    ],
+    "bytes": 38702,
+    "sha256": "ed33fbbd26e6edbb139611d6723dc8f9c684b146d9d7c8797c3075fa1e503031",
+    "reference_only": true
+  }
+]

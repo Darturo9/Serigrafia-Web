@@ -1,0 +1,79 @@
+{% load static %}<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+{% if not publicacion_activa %}<meta name="robots" content="noindex,nofollow">{% endif %}
+<title>JYZ · Atrévete a descubrir tu estilo</title>
+<meta name="description" content="Serigrafía, sublimación y prendas personalizadas con JYZ. Conoce nuestros trabajos y conversa sobre tu idea por WhatsApp.">
+{% include 'catalogo/_compartir.html' %}
+<link rel="stylesheet" href="{% static 'catalogo/inicio.css' %}">
+</head>
+<body>
+<a class="skip" href="#inicio">Saltar al contenido</a>
+{% if not publicacion_activa %}<p class="revision">Vista de revisión · Catálogo pendiente de confirmar</p>{% endif %}
+<header class="cabecera">
+<a class="marca" href="#inicio" aria-label="JYZ, inicio">JYZ<span>Serigrafía &amp; sublimación</span></a>
+<a class="contacto" href="{{ whatsapp_url }}" target="_blank" rel="noopener noreferrer">Hablemos de tu idea <span class="ico ico-ne" aria-hidden="true"></span></a>
+<nav class="navegacion" aria-label="Secciones"><a href="#catalogo">Catálogo</a><a href="#cotizacion">Cotización</a>{% comment "ADR 021: enlace de trabajos oculto temporalmente" %}{% if galeria %}<a href="#trabajos">Trabajos</a>{% endif %}{% endcomment %}<a href="#contacto">Contacto</a></nav></header>
+<main id="inicio">
+<section class="hero" aria-labelledby="titulo">
+<div class="presentacion">
+<p class="tecnicas">Serigrafía / Sublimación</p>
+<h1 id="titulo">ATRÉVETE<br>A DESCUBRIR<br><span>TU ESTILO.</span></h1>
+<p class="descripcion">Personalización para personas, grupos, empresas y marcas. Creatividad y cultura urbana para darle forma a tu idea.</p>
+<a class="boton" href="{{ whatsapp_url }}" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp <span class="ico ico-ne" aria-hidden="true"></span></a>
+<p class="nota">Conversemos sobre tu diseño, las prendas y lo que necesitas.</p>
+</div>
+<div class="identidad">
+<div class="cartel">
+<div class="cartel-cabecera"><span>JYZ</span><span class="ico ico-ast" aria-hidden="true"></span><span>Tu estilo</span></div>
+<img src="{% static 'catalogo/logo-jyz-del-pdf.jpg' %}" alt="Logo JYZ, letras blancas sobre un círculo naranja" width="1600" height="1600" fetchpriority="high">
+<p>ATRÉVETE A DESCUBRIR TU ESTILO</p>
+</div>
+<div class="sello" aria-hidden="true">DISEÑO<br>CON IDENTIDAD</div>
+</div>
+</section>
+<div class="cinta" aria-label="Técnicas de personalización"><span>SERIGRAFÍA</span><span class="ico ico-ast" aria-hidden="true"></span><span>SUBLIMACIÓN</span><span class="ico ico-ast" aria-hidden="true"></span><span>JYZ</span><span class="ico ico-ast" aria-hidden="true"></span><span>CREATIVIDAD</span></div>
+<section class="seccion clara" id="catalogo" aria-labelledby="titulo-catalogo">
+<div class="encabezado-catalogo"><h2 id="titulo-catalogo">Hazlo a tu manera.</h2><p class="intro">Camisetas, hoodies y otras ideas. Consulta con JYZ qué podemos personalizar.</p></div>
+<div class="lista-productos">
+{% for producto in productos %}
+<article class="producto">
+{% if producto.es_ejemplo %}<p><strong>Producto de prueba · no disponible para venta</strong></p>{% endif %}
+{% if producto.foto_url %}<img src="{{ producto.foto_url }}" alt="{{ producto.foto_alt|default:producto.nombre }}" width="600" height="600" loading="lazy">{% else %}<p>Fotografía pendiente</p>{% endif %}
+{% if producto.categoria %}<p>{{ producto.categoria }}</p>{% endif %}<h3>{{ producto.nombre }}</h3><p class="mensaje">{{ producto.descripcion }}</p>
+{% if producto.tallas %}<p>Tallas: {{ producto.tallas|join:", " }}</p>{% endif %}
+<p><a href="{% url 'producto_detalle' producto.pk %}">Ver producto <span class="ico ico-ne" aria-hidden="true"></span></a></p>
+{% if producto.es_ejemplo %}<p class="ayuda">Fotografía de referencia de Unsplash. No representa un trabajo de JYZ. Las opciones reales están pendientes.</p>{% else %}<a href="{% url 'producto_detalle' producto.pk %}#solicitud">Quiero este producto <span class="ico ico-ne" aria-hidden="true"></span></a>{% endif %}</article>
+{% empty %}<div class="estado-vacio"><h3>Estamos preparando el catálogo.</h3><p>Mientras tanto, cuéntanos qué te gustaría personalizar por WhatsApp.</p><a href="{{ whatsapp_url }}" target="_blank" rel="noopener noreferrer">Conversar con JYZ <span class="ico ico-ne" aria-hidden="true"></span></a></div>{% endfor %}
+</div>
+<aside class="consulta-personalizacion" aria-labelledby="titulo-personalizacion"><div><h3 id="titulo-personalizacion">¿Qué puedo personalizar?</h3><p>¿Tienes otra prenda, un accesorio o una idea en mente? Consulta las posibilidades con JYZ.</p></div><div class="consulta-accion"><a class="boton" href="{{ personalizacion_url }}" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp <span class="ico ico-ne" aria-hidden="true"></span></a><p class="ayuda">El mensaje se prepara para que lo revises y envíes en el chat.</p></div></aside>
+</section>
+<section class="seccion dividida" id="cotizacion" aria-labelledby="titulo-cotizacion">
+<div><h2 id="titulo-cotizacion">Cuéntanos tu idea.</h2><p class="intro">Prepara tu solicitud y revísala antes de abrir WhatsApp. Ahí puedes adjuntar tu diseño y conversar sobre disponibilidad, precio y entrega.</p></div>
+<div class="formulario-panel">
+{% if cotizacion %}<form method="post" action="{% url 'inicio' %}#cotizacion">
+{% csrf_token %}<input type="hidden" name="accion" value="cotizar"><input type="hidden" name="producto" value="{{ cotizacion.producto.pk|default:'' }}">
+{% if cotizacion.producto %}<h3>{{ cotizacion.producto.nombre }}</h3>{% endif %}{{ cotizacion.non_field_errors }}
+{% for campo in cotizacion %}<div class="campo"><label for="{{ campo.id_for_label }}">{{ campo.label }}</label>{{ campo }}{% if campo.help_text %}<p class="ayuda">{{ campo.help_text }}</p>{% endif %}{{ campo.errors }}</div>{% endfor %}
+<button class="boton" type="submit">Preparar mensaje <span class="ico ico-ne" aria-hidden="true"></span></button></form>
+{% else %}<form method="post" action="{% url 'inicio' %}#cotizacion">
+{% csrf_token %}<input type="hidden" name="accion" value="idea">{{ idea.non_field_errors }}
+{% for campo in idea %}<div class="campo"><label for="{{ campo.id_for_label }}">{{ campo.label }}</label>{{ campo }}{% if campo.help_text %}<p class="ayuda">{{ campo.help_text }}</p>{% endif %}{{ campo.errors }}</div>{% endfor %}
+<button class="boton" type="submit">Preparar mensaje <span class="ico ico-ne" aria-hidden="true"></span></button></form>
+{% if productos_cotizables %}<p class="ayuda">¿Ya viste algo en el catálogo? <a href="#catalogo">Elige un producto</a> para indicar cantidades y tallas.</p>{% endif %}{% endif %}
+{% if mensaje and accion == 'cotizar' or mensaje and accion == 'idea' %}<div class="mensaje-preparado" role="status"><h3>Revisa tu mensaje</h3><p class="mensaje">{{ mensaje }}</p><a class="boton" href="{{ enlace_mensaje }}" target="_blank" rel="noopener noreferrer">Abrir WhatsApp <span class="ico ico-ne" aria-hidden="true"></span></a><p class="ayuda">El mensaje no se envía automáticamente. Pulsa Enviar dentro de WhatsApp cuando esté listo.</p></div>{% endif %}
+</div></section>
+{% comment "ADR 021: trabajos ocultos temporalmente; conservar galeria y fotos" %}
+{% if galeria %}<section class="seccion clara" id="trabajos" aria-labelledby="titulo-trabajos">
+<h2 id="titulo-trabajos">Ideas que toman forma.</h2>
+<p class="intro">Playeras estampadas: colores, ilustraciones y diseños con identidad.</p>
+<div class="galeria-referencias">
+{% for imagen in galeria %}<figure{% if forloop.first %} class="referencia-destacada"{% endif %}><img src="{{ imagen.url }}" alt="{{ imagen.descripcion }}" loading="lazy"><figcaption><span class="etiqueta-referencia">JYZ</span><h3>{{ imagen.titulo }}</h3><p class="ayuda">{{ imagen.descripcion }}</p></figcaption></figure>{% endfor %}
+</div>
+</section>{% endif %}
+{% endcomment %}
+{% include 'catalogo/_footer.html' %}
+
+</main>
+</body></html>

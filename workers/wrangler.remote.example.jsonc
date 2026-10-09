@@ -1,0 +1,47 @@
+{
+  "name": "jyz-prueba",
+  "main": "src/entry.py",
+  "compatibility_date": "2026-10-07",
+  "compatibility_flags": [
+    "python_workers"
+  ],
+  "workers_dev": false,
+  "preview_urls": false,
+  "vars": {
+    "JYZ_WORKER_LOCAL": "false",
+    "JYZ_REVIEW_ORIGIN": "REEMPLAZAR_POR_ORIGEN_HTTPS_AUTORIZADO",
+    "JYZ_DB_SCHEMA": "jyz_prueba",
+    "SUPABASE_URL": "https://kcahxuvfmrzxzlnpezyf.supabase.co"
+  },
+  "hyperdrive": [
+    {
+      "binding": "HYPERDRIVE",
+      "id": "REEMPLAZAR_TRAS_AUTORIZACION"
+    }
+  ],
+  "assets": {
+    "directory": "assets",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "python_modules": {
+    "exclude": [
+      "**/*.pyc",
+      "**/__pycache__/**",
+      ".venv-workers/**",
+      "node_modules/**",
+      ".wrangler/**",
+      "**/tests_runtime.py",
+      "catalogo/tests.py"
+    ]
+  },
+  "rules": [
+    {
+      "type": "Text",
+      "globs": [
+        "**/*.html"
+      ],
+      "fallthrough": true
+    }
+  ]
+}

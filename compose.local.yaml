@@ -1,0 +1,20 @@
+name: serigrafia-web
+services:
+  postgres:
+    image: postgres@sha256:4b7183ac05f8ef417db21fd72d71047a4238340c261d3cc3ddb6d579ab5071ae
+    container_name: serigrafia-web-postgres
+    environment:
+      POSTGRES_DB: serigrafia_local
+      POSTGRES_USER: serigrafia_local
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Preparar credenciales con scripts/local.py db-start}
+    ports:
+      - "127.0.0.1:55439:5432"
+    volumes:
+      - postgres_local:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U serigrafia_local -d serigrafia_local"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+volumes:
+  postgres_local:
